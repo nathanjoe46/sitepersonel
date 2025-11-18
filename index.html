@@ -950,23 +950,80 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+  <script>
+       // ============================================
+        // 1. ANIMATION DU NOM (TYPING EFFECT)
+        // ============================================
+        window.addEventListener('DOMContentLoaded', () => {
+            const nameElement = document.getElementById('typed-name');
+            const fullName = 'Dort Jonathan Alix Pierre';
+            let index = 0;
+            
+            nameElement.textContent = '';
+            nameElement.style.borderRight = '3px solid white';
+            
+            function typeWriter() {
+                if (index < fullName.length) {
+                    nameElement.textContent += fullName.charAt(index);
+                    index++;
+                    setTimeout(typeWriter, 100);
+                } else {
+                    // Enlever le curseur après l'animation
+                    setTimeout(() => {
+                        nameElement.style.borderRight = 'none';
+                    }, 500);
+                }
+            }
+            
+            // Démarrer l'animation après un court délai
+            setTimeout(typeWriter, 500);
         });
 
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+        // ============================================
+        // 2. MENU MOBILE (FIX HAMBURGER)
+        // ============================================
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = mobileMenuBtn.querySelector('i');
+            
+            // Toggle menu
+            mobileMenuBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                mobileMenu.classList.toggle('hidden');
+                
+                // Changer l'icône
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                } else {
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-times');
+                }
+            });
+            
+            // Fermer le menu quand on clique sur un lien
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                });
+            });
+            
+            // Fermer le menu si on clique ailleurs
+            document.addEventListener('click', function(e) {
+                if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+                    mobileMenu.classList.add('hidden');
+                    menuIcon.classList.remove('fa-times');
+                    menuIcon.classList.add('fa-bars');
+                }
             });
         });
 
-        // Smooth scroll for navigation links
+        // ============================================
+        // 3. SMOOTH SCROLL
+        // ============================================
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -980,29 +1037,83 @@
             });
         });
 
-        // Form submission handler
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
+        // ============================================
+        // 4. FORMULAIRE DE CONTACT (GOOGLE SHEETS + EMAIL)
+        // ============================================
+        document.getElementById('contact-form').addEventListener('submit', async function(e) {
             e.preventDefault();
             
-            const formData = new FormData(this);
-            const data = Object.fromEntries(formData);
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
             
-            // Construct mailto link
-            const subject = encodeURIComponent(data.subject);
-            const body = encodeURIComponent(
-                `Nom: ${data.name}\nEmail: ${data.email}\n\nMessage:\n${data.message}`
-            );
+            // Afficher le loading
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Envoi en cours...';
+            submitBtn.disabled = true;
             
-            window.location.href = `mailto:pierrealixjonathan@gmail.com?subject=${subject}&body=${body}`;
+            // Récupérer les données du formulaire
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                subject: document.getElementById('subject').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toLocaleString('fr-FR', { timeZone: 'America/Port-au-Prince' })
+            };
             
-            // Reset form
-            this.reset();
-            
-            // Show success message
-            alert('Votre message a été préparé. Votre client email va s\'ouvrir.');
+            try {
+                // IMPORTANT: Remplacez cette URL par votre URL Google Apps Script
+                // Instructions complètes ci-dessous
+                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxVa8p2uM_4UnKHi6D-z3NYT3zlvArdrllCN62-o-FRNO_aO9YPzWEs-D2bBILSxMOK2Q/exec';
+                
+                // Envoyer vers Google Sheets
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+                
+                // Succès
+                submitBtn.innerHTML = '<i class="fas fa-check-circle mr-2"></i>Message Envoyé!';
+                submitBtn.classList.remove('gradient-bg');
+                submitBtn.classList.add('bg-green-500');
+                
+                // Réinitialiser le formulaire
+                this.reset();
+                
+                // Afficher message de succès
+                alert('✅ Merci! Votre message a été envoyé avec succès. Je vous répondrai dans les plus brefs délais.');
+                
+                // Restaurer le bouton après 3 secondes
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.classList.remove('bg-green-500');
+                    submitBtn.classList.add('gradient-bg');
+                    submitBtn.disabled = false;
+                }, 3000);
+                
+            } catch (error) {
+                console.error('Erreur:', error);
+                
+                // Erreur
+                submitBtn.innerHTML = '<i class="fas fa-exclamation-circle mr-2"></i>Erreur';
+                submitBtn.classList.add('bg-red-500');
+                
+                alert('❌ Une erreur est survenue. Veuillez réessayer ou me contacter directement à pierrealixjonathan@gmail.com');
+                
+                // Restaurer le bouton
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.classList.remove('bg-red-500');
+                    submitBtn.disabled = false;
+                }, 3000);
+            }
         });
 
-        // Add active class to navigation on scroll
+        // ============================================
+        // 5. NAVIGATION ACTIVE ON SCROLL
+        // ============================================
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-link');
@@ -1024,7 +1135,9 @@
             });
         });
 
-        // Animate skill bars on scroll
+        // ============================================
+        // 6. ANIMATE SKILL BARS ON SCROLL
+        // ============================================
         const observerOptions = {
             threshold: 0.5
         };
@@ -1048,3 +1161,4 @@
         if (skillsSection) {
             observer.observe(skillsSection);
         }
+  </script>
