@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jonathan Alix Pierre Dort | Ingénieur en Informatique</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -69,6 +70,19 @@
             position: relative;
             overflow: hidden;
         }
+
+        /* Curseur clignotant */ 
+        .typing-cursor::after {
+             content: '|';
+             margin-left: 4px;
+            animation: blink 1s infinite;
+            color: currentColor; /* S'adapte à la couleur de votre texte Tailwind */
+       }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
         
         .cv-download-btn::before {
             content: '';
@@ -155,7 +169,7 @@
                         </div>
                     </div>
                     
-                    <h1 class="text-5xl md:text-6xl font-bold mb-4">Salut! je suis Jonathan Alix Pierre Dort</h1>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-4 typewriter-text">Salut! Je suis Jonathan Alix Pierre Dort</h1>
                     <h2 class="text-2xl md:text-3xl font-light mb-6">Ingénieur en Informatique </h2>
                     <p class="text-lg mb-8 text-gray-100">
                         Spécialisé dans le développement d'applications web robustes et évolutives, 
@@ -314,7 +328,7 @@
                         <div>
                             <div class="flex justify-between mb-1">
                                 <span class="text-sm font-medium">PHP</span>
-                                <span class="text-sm font-medium">Expert</span>
+                                <!-- <span class="text-sm font-medium">Expert</span> -->
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="gradient-bg h-2 rounded-full skill-bar" style="width: 95%"></div>
@@ -323,7 +337,7 @@
                         <div>
                             <div class="flex justify-between mb-1">
                                 <span class="text-sm font-medium">JavaScript</span>
-                                <span class="text-sm font-medium">Avancé</span>
+                                <!-- <span class="text-sm font-medium">Avancé</span> -->
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="gradient-bg h-2 rounded-full skill-bar" style="width: 85%"></div>
@@ -332,7 +346,7 @@
                         <div>
                             <div class="flex justify-between mb-1">
                                 <span class="text-sm font-medium">Python</span>
-                                <span class="text-sm font-medium">Intermédiaire</span>
+                                <!-- <span class="text-sm font-medium">Intermédiaire</span> -->
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="gradient-bg h-2 rounded-full skill-bar" style="width: 70%"></div>
@@ -341,7 +355,7 @@
                         <div>
                             <div class="flex justify-between mb-1">
                                 <span class="text-sm font-medium">HTML/CSS</span>
-                                <span class="text-sm font-medium">Expert</span>
+                                <!-- <span class="text-sm font-medium">Expert</span> -->
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="gradient-bg h-2 rounded-full skill-bar" style="width: 90%"></div>
@@ -350,7 +364,7 @@
                         <div>
                             <div class="flex justify-between mb-1">
                                 <span class="text-sm font-medium">SQL</span>
-                                <span class="text-sm font-medium">Expert</span>
+                                <!-- <span class="text-sm font-medium">Expert</span> -->
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="gradient-bg h-2 rounded-full skill-bar" style="width: 90%"></div>
@@ -372,7 +386,7 @@
                         </div>
                         <div class="flex items-center justify-between p-2 bg-gray-50 rounded">
                             <span class="font-medium">React</span>
-                            <span class="text-sm text-gray-500">En apprentissage</span>
+                            <!-- <span class="text-sm text-gray-500">En apprentissage</span> -->
                         </div>
                         <div class="flex items-center justify-between p-2 bg-gray-50 rounded">
                             <span class="font-medium">Next.js</span>
@@ -388,7 +402,7 @@
                         </div>
                         <div class="flex items-center justify-between p-2 bg-gray-50 rounded">
                             <span class="font-medium">Laravel</span>
-                            <span class="text-sm text-gray-500">Notions</span>
+                            <!-- <span class="text-sm text-gray-500">Notions</span> -->
                         </div>
                     </div>
                 </div>
@@ -403,7 +417,7 @@
                         <div>
                             <div class="flex justify-between mb-1">
                                 <span class="text-sm font-medium">MySQL</span>
-                                <span class="text-sm font-medium">Expert</span>
+                                <!-- <span class="text-sm font-medium">Expert</span> -->
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="gradient-bg h-2 rounded-full skill-bar" style="width: 95%"></div>
@@ -412,7 +426,7 @@
                         <div>
                             <div class="flex justify-between mb-1">
                                 <span class="text-sm font-medium">PostgreSQL</span>
-                                <span class="text-sm font-medium">Intermédiaire</span>
+                                <!-- <span class="text-sm font-medium">Intermédiaire</span> -->
                             </div>
                             <div class="w-full bg-gray-200 rounded-full h-2">
                                 <div class="gradient-bg h-2 rounded-full skill-bar" style="width: 70%"></div>
@@ -573,94 +587,7 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="galerie" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold text-center mb-4">Galerie de Projets</h2>
-            <div class="w-20 h-1 gradient-bg mx-auto mb-4"></div>
-            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-                Découvrez des captures d'écran de mes principales réalisations et projets collaboratifs
-            </p>
-            
-            <!-- JL Express Screenshots -->
-            <div class="mb-16">
-                <h3 class="text-2xl font-semibold mb-6 flex items-center">
-                    <i class="fas fa-shipping-fast text-indigo-600 mr-3"></i>
-                    JL Express Shipping
-                </h3>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="group relative overflow-hidden rounded-lg shadow-lg card-hover">
-                        <img id="jl-screen-1" src="assets/admin jl.png" alt="JL Express Dashboard" class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="absolute bottom-0 left-0 right-0 p-4">
-                                <p class="text-white font-semibold">Page d'Accueil JL Express</p>
-                                <p class="text-gray-200 text-sm">Interface principale avec présentation des services</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="group relative overflow-hidden rounded-lg shadow-lg card-hover">
-                        <img id="jl-screen-2" src="images/jl-gallery-demo.png" alt="JL Express Pré-alertes" class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="absolute bottom-0 left-0 right-0 p-4">
-                                <p class="text-white font-semibold">Galerie de Projets</p>
-                                <p class="text-gray-200 text-sm">Visualisation des réalisations et captures d'écran</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="group relative overflow-hidden rounded-lg shadow-lg card-hover">
-                        <img id="jl-screen-3" src="assets/admin jl.png" alt="JL Express Admin" class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="absolute bottom-0 left-0 right-0 p-4">
-                                <p class="text-white font-semibold">Interface Administrateur</p>
-                                <p class="text-gray-200 text-sm">Panneau d'administration complet</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SINAPSE Screenshots -->
-            <div class="mb-16">
-                <h3 class="text-2xl font-semibold mb-6 flex items-center">
-                    <i class="fas fa-child text-indigo-600 mr-3"></i>
-                    SINAPSE - Système de Protection de l'Enfance
-                </h3>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="group relative overflow-hidden rounded-lg shadow-lg card-hover">
-                        <img id="sinapse-screen-1" src="assets/graphics.png" alt="SINAPSE Dossiers" class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="absolute bottom-0 left-0 right-0 p-4">
-                                <p class="text-white font-semibold">Interface de Connexion SINAPSE</p>
-                                <p class="text-gray-200 text-sm">Système d'authentification sécurisé pour l'IBESR</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="group relative overflow-hidden rounded-lg shadow-lg card-hover">
-                        <img id="sinapse-screen-2" src="images/sinapse-stats.png" alt="SINAPSE Stats" class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            <div class="absolute bottom-0 left-0 right-0 p-4">
-                                <p class="text-white font-semibold">Tableau de Bord Analytique SINAPSE</p>
-                                <p class="text-gray-200 text-sm">Statistiques et graphiques sur la protection de l'enfance</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Autres Projets Screenshots -->
-            
-              
-                    
-          
-
-            <!-- Note pour remplacer les images -->
-            
-        </div>
-    </section>
-
+   
     <!-- Services Section -->
     <section id="services" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -805,7 +732,7 @@
                             </div>
                             <div>
                                 <h4 class="font-semibold mb-1">Email</h4>
-                                <p class="text-gray-600"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e6968f83949483878a8f9e8c898887928e8788a6818b878f8ac885898b">[email&#160;protected]</a></p>
+                                <p class="text-gray-600">pierrealixjonathan@gmail.com</p>
                             </div>
                         </div>
                         
@@ -830,7 +757,7 @@
                             Pour en savoir plus sur mon parcours professionnel et mes compétences, 
                             téléchargez mon CV complet au format PDF.
                         </p>
-                        <a href="assetts/CV_Jonathan_Dort_Professionnel.pdf" download="CV_Jonathan_Alix_Pierre_Dort.pdf" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition shadow-lg">
+                        <a href="assets/CV_Jonathan_Dort_Professionnel.pdf" download="CV_Jonathan_Alix_Pierre_Dort.pdf" class="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition shadow-lg">
                             <i class="fas fa-file-pdf text-xl"></i>
                             <span>Télécharger mon CV (PDF)</span>
                         </a>
@@ -954,31 +881,65 @@
        // ============================================
         // 1. ANIMATION DU NOM (TYPING EFFECT)
         // ============================================
-        window.addEventListener('DOMContentLoaded', () => {
-            const nameElement = document.getElementById('typed-name');
-            const fullName = 'Dort Jonathan Alix Pierre';
-            let index = 0;
+        // window.addEventListener('DOMContentLoaded', () => {
+        //     const nameElement = document.querySelector('typewriter-text');
+        //     const fullName = 'Dort Jonathan Alix Pierre';
+        //     let index = 0;
             
-            nameElement.textContent = '';
-            nameElement.style.borderRight = '3px solid white';
+        //     nameElement.textContent = '';
+        //     nameElement.style.borderRight = '3px solid white';
             
-            function typeWriter() {
-                if (index < fullName.length) {
-                    nameElement.textContent += fullName.charAt(index);
-                    index++;
-                    setTimeout(typeWriter, 100);
-                } else {
-                    // Enlever le curseur après l'animation
-                    setTimeout(() => {
-                        nameElement.style.borderRight = 'none';
-                    }, 500);
-                }
-            }
+        //     function typeWriter() {
+        //         if (index < fullName.length) {
+        //             nameElement.textContent += fullName.charAt(index);
+        //             index++;
+        //             setTimeout(typeWriter, 100);
+        //         } else {
+        //             // Enlever le curseur après l'animation
+        //             setTimeout(() => {
+        //                 nameElement.style.borderRight = 'none';
+        //             }, 500);
+        //         }
+        //     }
             
-            // Démarrer l'animation après un court délai
-            setTimeout(typeWriter, 500);
-        });
+        //     // Démarrer l'animation après un court délai
+        //     setTimeout(typeWriter, 500);
+        // });
 
+        document.addEventListener("DOMContentLoaded", () => {
+       const element = document.querySelector(".typewriter-text");
+  
+  // Sécurité : si l'élément n'existe pas, on arrête.
+  if (!element) return;
+
+  const textToType = element.innerText; // On récupère "Salut! je suis..."
+  element.innerText = ""; // On vide le H1 pour l'animation
+  
+  let index = 0;
+  const speed = 100; // Vitesse en ms (ajustez selon vos préférences)
+
+  function typeWriter() {
+    if (index < textToType.length) {
+      element.innerHTML += textToType.charAt(index);
+      index++;
+      setTimeout(typeWriter, speed);
+    } else {
+      // Optionnel : Retirer le curseur à la fin
+      element.classList.remove("typing-cursor");
+    }
+  }
+
+  // Ajout de la classe pour le curseur (voir CSS ci-dessous)
+  element.classList.add("typing-cursor");
+  
+  // Lancement
+  typeWriter();
+});
+
+
+           
+
+    const typingInterval = setInterval(typeCharacter, 100); // Adjust 100 for typing speed
         // ============================================
         // 2. MENU MOBILE (FIX HAMBURGER)
         // ============================================
