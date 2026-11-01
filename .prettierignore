@@ -1,0 +1,11 @@
+.next
+out
+node_modules
+pnpm-lock.yaml
+public/_generated
+public/admin
+.generated
+.lighthouseci
+playwright-report
+test-results
+next-env.d.ts
