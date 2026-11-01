@@ -1,0 +1,73 @@
+{
+  "title": {
+    "fr": "Systèmes d’information pour une institution publique",
+    "en": "Information systems for a public institution"
+  },
+  "intro": {
+    "fr": "Depuis 2023, je travaille sur les systèmes d’information d’une institution publique haïtienne chargée de la protection de l’enfance et du bien-être social.",
+    "en": "Since 2023 I have worked on the information systems of a Haitian public institution responsible for child protection and social welfare."
+  },
+  "areas": [
+    {
+      "title": { "fr": "Système d’information national", "en": "National information system" },
+      "description": {
+        "fr": "Administration, maintenance, fiabilisation des données et accompagnement des utilisateurs.",
+        "en": "Administration, maintenance, data quality and user support."
+      }
+    },
+    {
+      "title": { "fr": "Plateforme d’adoption", "en": "Adoption platform" },
+      "description": {
+        "fr": "Numérisation du suivi des dossiers et des procédures.",
+        "en": "Digital tracking of case files and procedures."
+      }
+    },
+    {
+      "title": { "fr": "Portail du certificat prénuptial", "en": "Prenuptial certificate portal" },
+      "description": {
+        "fr": "Dépôt et traitement des demandes en ligne.",
+        "en": "Online submission and processing of applications."
+      }
+    },
+    {
+      "title": { "fr": "Comptabilité", "en": "Accounting" },
+      "description": {
+        "fr": "Outil de gestion comptable interne.",
+        "en": "Internal accounting tool."
+      }
+    },
+    {
+      "title": { "fr": "Accompagnement des mineurs", "en": "Support for minors" },
+      "description": {
+        "fr": "Gestion des dossiers liés à l’accompagnement et à la protection des mineurs.",
+        "en": "Case management for the support and protection of minors."
+      }
+    }
+  ],
+  "involved": [
+    {
+      "fr": "Traitement de données personnelles sensibles",
+      "en": "Handling sensitive personal data"
+    },
+    {
+      "fr": "Contrôle d’accès basé sur les rôles",
+      "en": "Role-based access control"
+    },
+    {
+      "fr": "Validation et contrôle des données saisies",
+      "en": "Data entry validation and checks"
+    },
+    {
+      "fr": "Génération de documents et de rapports administratifs",
+      "en": "Generation of administrative documents and reports"
+    },
+    {
+      "fr": "Documentation des procédures et formation de plus de 15 utilisateurs",
+      "en": "Process documentation and training for more than 15 users"
+    }
+  ],
+  "note": {
+    "fr": "Par respect de la confidentialité, ces systèmes sont présentés sans nom, sans capture d’écran et sans détail technique. Je peux en dire davantage en entretien, dans la limite de mes obligations.",
+    "en": "For confidentiality reasons, these systems are presented without names, screenshots or technical details. I can say more in an interview, within the limits of my obligations."
+  }
+}

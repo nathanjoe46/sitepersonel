@@ -1,0 +1,18 @@
+{
+  "intro": {
+    "fr": "Je crée du contenu pédagogique pour aider le public à utiliser les transactions électroniques en toute sécurité et à reconnaître les risques en ligne.",
+    "en": "I create educational content that helps people use electronic transactions safely and recognise online risks."
+  },
+  "topics": [
+    {
+      "fr": "Transactions et paiements électroniques",
+      "en": "Electronic transactions and payments"
+    },
+    { "fr": "Arnaques et hameçonnage", "en": "Scams and phishing" },
+    {
+      "fr": "Bonnes pratiques de cybersécurité au quotidien",
+      "en": "Everyday cybersecurity best practices"
+    }
+  ],
+  "links": []
+}

@@ -1,0 +1,23 @@
+{
+  "name": "PragmaTech Solution",
+  "role": { "fr": "Fondateur", "en": "Founder" },
+  "description": {
+    "fr": "PragmaTech Solution est l’entreprise de développement logiciel que j’ai fondée. Elle conçoit des applications web de gestion pour les entreprises et les organisations.",
+    "en": "PragmaTech Solution is the software development company I founded. It builds business management web applications for companies and organisations."
+  },
+  "services": [
+    {
+      "fr": "Applications web sur mesure et systèmes de gestion",
+      "en": "Custom web applications and management systems"
+    },
+    {
+      "fr": "Conception, optimisation et administration de bases de données",
+      "en": "Database design, optimisation and administration"
+    },
+    {
+      "fr": "Formation des utilisateurs et support technique",
+      "en": "User training and technical support"
+    }
+  ],
+  "url": ""
+}

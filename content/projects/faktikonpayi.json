@@ -1,0 +1,10 @@
+{
+  "title": "FaktiKonPayi",
+  "order": 3,
+  "published": true,
+  "featured": false,
+  "summary": { "fr": "Application SaaS de facturation.", "en": "SaaS invoicing application." },
+  "stack": [],
+  "links": { "live": "", "repo": "" },
+  "gallery": []
+}

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Jonathan Alix Pierre Dort</title>
+    <meta name="robots" content="noindex, follow" />
+    <meta
+      name="description"
+      content="Portfolio de Jonathan Alix Pierre Dort, ingénieur informatique — développement full-stack. Portfolio of Jonathan Alix Pierre Dort, software engineer."
+    />
+    <link rel="alternate" hreflang="fr" href="fr/" />
+    <link rel="alternate" hreflang="en" href="en/" />
+    <!-- Redirection selon la langue du navigateur (chemins relatifs : fonctionne avec ou sans sous-dossier). -->
+    <script>
+      (function () {
+        var langs = navigator.languages || [navigator.language || ''];
+        var target = 'fr/';
+        for (var i = 0; i < langs.length; i++) {
+          var l = String(langs[i]).toLowerCase();
+          if (l.indexOf('fr') === 0) break;
+          if (l.indexOf('en') === 0) {
+            target = 'en/';
+            break;
+          }
+        }
+        location.replace(target);
+      })();
+    </script>
+    <noscript><meta http-equiv="refresh" content="0; url=fr/" /></noscript>
+    <style>
+      body {
+        font:
+          16px/1.6 system-ui,
+          sans-serif;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        min-height: 100vh;
+        background: #fbfbf9;
+        color: #17171a;
+      }
+      a {
+        color: #1d4ccf;
+        margin: 0 0.75rem;
+      }
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #111113;
+          color: #ececef;
+        }
+        a {
+          color: #93b1ff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p><a href="fr/" hreflang="fr">Français</a><a href="en/" hreflang="en" lang="en">English</a></p>
+  </body>
+</html>

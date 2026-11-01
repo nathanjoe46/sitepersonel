@@ -1,0 +1,53 @@
+{
+  "name": "Jonathan Alix Pierre Dort",
+  "shortName": "Jonathan Dort",
+  "role": {
+    "fr": "Ingénieur informatique · Développement full-stack",
+    "en": "Software engineer · Full-stack development"
+  },
+  "headline": {
+    "fr": "Je conçois et développe des applications web métier fiables, de l’analyse des besoins à la mise en production.",
+    "en": "I design and build reliable business web applications, from requirements analysis to production."
+  },
+  "intro": {
+    "fr": "Côté serveur, je travaille principalement avec PHP, Laravel, Livewire et MySQL ; côté interface, avec JavaScript, React et TypeScript. Je suis le fondateur de PragmaTech Solution.",
+    "en": "On the server side I mainly work with PHP, Laravel, Livewire and MySQL; on the front end, with JavaScript, React and TypeScript. I am the founder of PragmaTech Solution."
+  },
+  "location": {
+    "fr": "Port-au-Prince, Haïti",
+    "en": "Port-au-Prince, Haiti"
+  },
+  "availability": {
+    "fr": "Disponible pour des missions freelance, des collaborations et des postes à temps plein ou à temps partiel.",
+    "en": "Available for freelance work, collaborations, and full-time or part-time positions."
+  },
+  "photo": {
+    "src": "/images/source/profile.jpg",
+    "alt": {
+      "fr": "Portrait de Jonathan Alix Pierre Dort",
+      "en": "Portrait of Jonathan Alix Pierre Dort"
+    }
+  },
+  "about": [
+    {
+      "fr": "Ingénieur informatique, je conçois des applications web, des systèmes d’information et des bases de données pour des institutions publiques, des organisations et des entreprises.",
+      "en": "As a software engineer, I build web applications, information systems and databases for public institutions, organisations and businesses."
+    },
+    {
+      "fr": "Mon travail couvre tout le cycle d’un projet : analyse des besoins, architecture applicative, modélisation des données, développement, tests, déploiement, maintenance et accompagnement des utilisateurs.",
+      "en": "My work covers the full project lifecycle: requirements analysis, application architecture, data modelling, development, testing, deployment, maintenance and user support."
+    },
+    {
+      "fr": "J’accorde une attention particulière à la sécurité, à la fiabilité des données et à l’évolution des applications en production. En parallèle, je crée du contenu pédagogique pour aider le public à utiliser les services numériques en toute sécurité.",
+      "en": "I pay particular attention to security, data reliability and how applications evolve in production. Alongside this, I create educational content that helps people use digital services safely."
+    }
+  ],
+  "languages": [
+    { "fr": "Créole haïtien — langue maternelle", "en": "Haitian Creole — native" },
+    { "fr": "Français — courant", "en": "French — fluent" },
+    { "fr": "Anglais — professionnel", "en": "English — professional working proficiency" }
+  ],
+  "cv": {
+    "fr": "/cv/jonathan-dort-cv-fr.pdf"
+  }
+}
