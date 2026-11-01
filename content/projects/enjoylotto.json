@@ -1,0 +1,10 @@
+{
+  "title": "EnjoyLotto",
+  "order": 6,
+  "published": false,
+  "featured": false,
+  "summary": { "fr": "Description à compléter.", "en": "Description to be completed." },
+  "stack": [],
+  "links": { "live": "", "repo": "" },
+  "gallery": []
+}

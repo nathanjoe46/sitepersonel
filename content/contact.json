@@ -1,0 +1,16 @@
+{
+  "email": "pierrealixjonathan@gmail.com",
+  "whatsapp": "50939272712",
+  "phoneDisplay": "+509 3927 2712",
+  "message": {
+    "fr": "Un projet, une mission ou une question ? Écrivez-moi par email ou sur WhatsApp.",
+    "en": "A project, an opportunity or a question? Reach me by email or on WhatsApp."
+  },
+  "links": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/jonathan-alix-pierre-dort-36522b1a3/"
+    },
+    { "label": "GitHub", "url": "https://github.com/nathanjoe46" }
+  ]
+}

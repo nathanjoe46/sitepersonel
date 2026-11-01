@@ -1,0 +1,36 @@
+{
+  "title": "JL Express",
+  "order": 1,
+  "published": true,
+  "featured": true,
+  "summary": {
+    "fr": "Plateforme web de gestion logistique pour le transit de colis entre les États-Unis et Haïti : espace client, espace d’administration et suivi des opérations.",
+    "en": "Logistics web platform for parcel forwarding between the United States and Haiti: customer portal, admin back office and operations tracking."
+  },
+  "role": { "fr": "Développeur principal", "en": "Lead developer" },
+  "start": "2024",
+  "end": "present",
+  "status": "development",
+  "stack": ["PHP", "MySQL", "JavaScript", "Tailwind CSS", "HTML5", "CSS3"],
+  "links": { "live": "", "repo": "" },
+  "cover": {
+    "src": "/images/source/jl-express-client.jpg",
+    "alt": {
+      "fr": "Page d’accueil de JL Express : « Votre solution de shipping USA-Haïti », avec les boutons Nos services et Calculer le prix.",
+      "en": "JL Express home page: “Your USA–Haiti shipping solution”, with Our services and Price calculator buttons."
+    }
+  },
+  "gallery": [
+    {
+      "src": "/images/source/jl-express-admin.jpg",
+      "alt": {
+        "fr": "Tableau de bord administrateur de JL Express : actions rapides (colis, préalertes, paiements, clients, achats assistés, rapports) et alertes prioritaires.",
+        "en": "JL Express admin dashboard: quick actions (parcels, pre-alerts, payments, customers, assisted purchases, reports) and priority alerts."
+      }
+    }
+  ],
+  "body": {
+    "fr": "## Contexte\n\nJL Express propose un service de transit de colis des États-Unis vers Haïti, en partenariat avec WELJ Express. La plateforme réunit en un seul outil le parcours des clients et le travail de l’équipe : de la préalerte jusqu’à la livraison.\n\n## Ce que j’ai construit\n\n- **Un espace client** : inscription, préalertes, suivi des colis, calcul du tarif et demandes d’achat assisté.\n- **Un espace d’administration** : gestion des clients et des colis, traitement des préalertes, validation des paiements, achats assistés et rapports.\n- **La base de données** : modélisation et gestion du schéma MySQL qui relie clients, colis, préalertes et paiements.\n\n## Sécurité\n\n- Protection CSRF sur l’ensemble des formulaires.\n- Requêtes préparées pour prévenir les injections SQL.\n- Validation systématique des données côté serveur.\n- Gestion sécurisée des sessions et des rôles d’administration.\n\n## Mon rôle\n\nDéveloppeur principal : conception de la plateforme, développement des deux espaces, modélisation de la base de données et mise en place des mécanismes de sécurité.",
+    "en": "## Context\n\nJL Express offers parcel forwarding from the United States to Haiti, in partnership with WELJ Express. The platform brings the customer journey and the team’s daily work into a single tool, from pre-alert to delivery.\n\n## What I built\n\n- **A customer portal**: sign-up, pre-alerts, parcel tracking, price calculator and assisted-purchase requests.\n- **An admin back office**: customer and parcel management, pre-alert processing, payment validation, assisted purchases and reports.\n- **The database**: design and management of the MySQL schema linking customers, parcels, pre-alerts and payments.\n\n## Security\n\n- CSRF protection on every form.\n- Prepared statements to prevent SQL injection.\n- Systematic server-side data validation.\n- Secure session handling and admin roles.\n\n## My role\n\nLead developer: platform design, development of both portals, database modelling and security."
+  }
+}

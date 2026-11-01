@@ -1,0 +1,13 @@
+{
+  "title": "SmartBiz",
+  "order": 2,
+  "published": true,
+  "featured": false,
+  "summary": {
+    "fr": "Logiciel de point de vente (POS) en SaaS, multi-entreprises (multi-tenant).",
+    "en": "Multi-tenant SaaS point-of-sale (POS) software."
+  },
+  "stack": [],
+  "links": { "live": "", "repo": "" },
+  "gallery": []
+}

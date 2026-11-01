@@ -1,0 +1,416 @@
+# Configuration de l'admin (Sveltia CMS) — https://sveltiacms.app
+# Les champs reflètent les schémas de src/lib/schema.ts : une saisie
+# invalide fait échouer le build, et le site en ligne reste inchangé.
+
+backend:
+  name: github
+  repo: nathanjoe46/sitepersonel
+  branch: main
+  commit_messages:
+    create: 'contenu : création de « {{slug}} » ({{collection}})'
+    update: 'contenu : mise à jour de « {{slug}} » ({{collection}})'
+    delete: 'contenu : suppression de « {{slug}} » ({{collection}})'
+    uploadMedia: 'contenu : ajout du média « {{path}} »'
+    deleteMedia: 'contenu : suppression du média « {{path}} »'
+
+site_url: https://nathanjoe46.github.io/sitepersonel/
+display_url: https://nathanjoe46.github.io/sitepersonel/
+locale: fr
+
+# Les images ajoutées ici sont optimisées automatiquement au build (AVIF/WebP).
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+collections:
+  # ───────────────────────────── Profil et sections ─────────────────────────────
+  - name: pages
+    label: Profil et sections
+    editor: { preview: false }
+    files:
+      - name: profile
+        label: Profil
+        file: content/profile.json
+        format: json
+        fields:
+          - { label: Nom complet, name: name, widget: string }
+          - { label: Nom court (en-tête), name: shortName, widget: string }
+          - label: Titre professionnel
+            name: role
+            widget: object
+            fields:
+              - { label: Français, name: fr, widget: string }
+              - { label: English, name: en, widget: string }
+          - label: Accroche (grande phrase sous le nom)
+            name: headline
+            widget: object
+            fields:
+              - { label: Français, name: fr, widget: text }
+              - { label: English, name: en, widget: text }
+          - label: Introduction
+            name: intro
+            widget: object
+            fields:
+              - { label: Français, name: fr, widget: text }
+              - { label: English, name: en, widget: text }
+          - label: Localisation
+            name: location
+            widget: object
+            fields:
+              - { label: Français, name: fr, widget: string }
+              - { label: English, name: en, widget: string }
+          - label: Disponibilité
+            name: availability
+            widget: object
+            fields:
+              - { label: Français, name: fr, widget: text }
+              - { label: English, name: en, widget: text }
+          - label: Photo
+            name: photo
+            widget: object
+            fields:
+              - { label: Image, name: src, widget: image, hint: 'Portrait, idéalement au format 4:5.' }
+              - label: Texte alternatif
+                name: alt
+                widget: object
+                fields:
+                  - { label: Français, name: fr, widget: string }
+                  - { label: English, name: en, widget: string }
+          - label: À propos (paragraphes)
+            name: about
+            widget: list
+            fields:
+              - { label: Français, name: fr, widget: text }
+              - { label: English, name: en, widget: text }
+          - label: Langues parlées
+            name: languages
+            widget: list
+            fields:
+              - { label: Français, name: fr, widget: string }
+              - { label: English, name: en, widget: string }
+          - label: CV (PDF)
+            name: cv
+            widget: object
+            fields:
+              - { label: CV en français, name: fr, widget: file }
+              - { label: CV en anglais, name: en, widget: file, required: false }
+
+      - name: contact
+        label: Contact
+        file: content/contact.json
+        format: json
+        fields:
+          - { label: Email, name: email, widget: string }
+          - label: Numéro WhatsApp
+            name: whatsapp
+            widget: string
+            required: false
+            hint: 'Format international sans + ni espaces, ex. 50939272712'
+          - { label: Téléphone affiché, name: phoneDisplay, widget: string, required: false }
+          - label: Message d’invitation
+            name: message
+            widget: object
+            fields:
+              - { label: Français, name: fr, widget: text }
+              - { label: English, name: en, widget: text }
+          - label: Liens (LinkedIn, GitHub…)
+            name: links
+            widget: list
+            fields:
+              - { label: Libellé, name: label, widget: string }
+              - { label: URL, name: url, widget: string }
+
+      - name: skills
+        label: Expertise
+        file: content/skills.json
+        format: json
+        fields:
+          - label: Groupes de compétences
+            name: groups
+            widget: list
+            fields:
+              - label: Titre
+                name: title
+                widget: object
+                fields:
+                  - { label: Français, name: fr, widget: string }
+                  - { label: English, name: en, widget: string }
+              - label: Éléments
+                name: items
+                widget: object
+                hint: 'Séparer les éléments par des virgules.'
+                fields:
+                  - { label: Français, name: fr, widget: list }
+                  - { label: English, name: en, widget: list }
+
+      - name: experience
+        label: Parcours
+        file: content/experience.json
+        format: json
+        fields:
+          - label: Expériences (de la plus récente à la plus ancienne)
+            name: items
+            widget: list
+            summary: '{{fields.organization.fr}} — {{fields.role.fr}}'
+            fields:
+              - label: Poste
+                name: role
+                widget: object
+                fields:
+                  - { label: Français, name: fr, widget: string }
+                  - { label: English, name: en, widget: string }
+              - label: Organisation
+                name: organization
+                widget: object
+                fields:
+                  - { label: Français, name: fr, widget: string }
+                  - { label: English, name: en, widget: string }
+              - label: Lieu
+                name: location
+                widget: object
+                required: false
+                fields:
+                  - { label: Français, name: fr, widget: string, required: false }
+                  - { label: English, name: en, widget: string, required: false }
+              - { label: Début (AAAA ou AAAA-MM), name: start, widget: string, required: false }
+              - label: Fin (AAAA, AAAA-MM ou present)
+                name: end
+                widget: string
+                required: false
+                hint: 'Écrire « present » pour un poste en cours.'
+              - label: Réalisations
+                name: highlights
+                widget: list
+                fields:
+                  - { label: Français, name: fr, widget: text }
+                  - { label: English, name: en, widget: text }
+              - { label: Technologies, name: stack, widget: list, required: false }
+
+      - name: education
+        label: Formation
+        file: content/education.json
+        format: json
+        fields:
+          - label: Diplômes
+            name: degrees
+            widget: list
+            fields:
+              - label: Intitulé
+                name: title
+                widget: object
+                fields:
+                  - { label: Français, name: fr, widget: string }
+                  - { label: English, name: en, widget: string }
+              - { label: Établissement, name: school, widget: string }
+              - label: Lieu
+                name: location
+                widget: object
+                required: false
+                fields:
+                  - { label: Français, name: fr, widget: string, required: false }
+                  - { label: English, name: en, widget: string, required: false }
+              - { label: Début (AAAA ou AAAA-MM), name: start, widget: string }
+              - { label: Fin (AAAA ou AAAA-MM), name: end, widget: string }
+              - label: Note
+                name: note
+                widget: object
+                required: false
+                fields:
+                  - { label: Français, name: fr, widget: string, required: false }
+                  - { label: English, name: en, widget: string, required: false }
+          - label: Certifications
+            name: certifications
+            widget: list
+            fields:
+              - label: Intitulé
+                name: title
+                widget: object
+                fields:
+                  - { label: Français, name: fr, widget: string }
+                  - { label: English, name: en, widget: string }
+              - { label: Organisme, name: issuer, widget: string, required: false }
+              - { label: Date (AAAA ou AAAA-MM), name: date, widget: string }
+
+      - name: company
+        label: Entreprise
+        file: content/company.json
+        format: json
+        fields:
+          - { label: Nom, name: name, widget: string }
+          - label: Votre rôle
+            name: role
+            widget: object
+            fields:
+              - { label: Français, name: fr, widget: string }
+              - { label: English, name: en, widget: string }
+          - label: Description
+            name: description
+            widget: object
+            fields:
+              - { label: Français, name: fr, widget: text }
+              - { label: English, name: en, widget: text }
+          - label: Services
+            name: services
+            widget: list
+            fields:
+              - { label: Français, name: fr, widget: string }
+              - { label: English, name: en, widget: string }
+          - { label: Site web, name: url, widget: string, required: false }
+
+      - name: public-sector
+        label: Secteur public (confidentiel)
+        file: content/public-sector.json
+        format: json
+        fields:
+          - label: Titre
+            name: title
+            widget: object
+            fields:
+              - { label: Français, name: fr, widget: string }
+              - { label: English, name: en, widget: string }
+          - label: Introduction
+            name: intro
+            widget: object
+            fields:
+              - { label: Français, name: fr, widget: text }
+              - { label: English, name: en, widget: text }
+          - label: Domaines
+            name: areas
+            widget: list
+            hint: 'Rester générique : ni nom de système, ni URL, ni détail technique.'
+            fields:
+              - label: Titre
+                name: title
+                widget: object
+                fields:
+                  - { label: Français, name: fr, widget: string }
+                  - { label: English, name: en, widget: string }
+              - label: Description
+                name: description
+                widget: object
+                fields:
+                  - { label: Français, name: fr, widget: text }
+                  - { label: English, name: en, widget: text }
+          - label: Ce que ce travail implique
+            name: involved
+            widget: list
+            fields:
+              - { label: Français, name: fr, widget: string }
+              - { label: English, name: en, widget: string }
+          - label: Note de confidentialité
+            name: note
+            widget: object
+            fields:
+              - { label: Français, name: fr, widget: text }
+              - { label: English, name: en, widget: text }
+
+      - name: teaching
+        label: Éducation numérique
+        file: content/teaching.json
+        format: json
+        fields:
+          - label: Introduction
+            name: intro
+            widget: object
+            fields:
+              - { label: Français, name: fr, widget: text }
+              - { label: English, name: en, widget: text }
+          - label: Thèmes
+            name: topics
+            widget: list
+            fields:
+              - { label: Français, name: fr, widget: string }
+              - { label: English, name: en, widget: string }
+          - label: Liens vers vos contenus
+            name: links
+            widget: list
+            required: false
+            fields:
+              - label: Libellé
+                name: label
+                widget: object
+                fields:
+                  - { label: Français, name: fr, widget: string }
+                  - { label: English, name: en, widget: string }
+              - { label: URL, name: url, widget: string }
+
+  # ─────────────────────────────────── Projets ───────────────────────────────────
+  - name: projects
+    label: Projets
+    label_singular: Projet
+    folder: content/projects
+    format: json
+    extension: json
+    create: true
+    delete: true
+    identifier_field: title
+    slug: '{{slug}}'
+    summary: '{{order}}. {{title}}'
+    sortable_fields: { fields: [order, title], default: { field: order, direction: ascending } }
+    editor: { preview: false }
+    fields:
+      - { label: Nom du projet, name: title, widget: string }
+      - { label: Ordre d’affichage, name: order, widget: number, value_type: int, min: 0, default: 10 }
+      - { label: Publié, name: published, widget: boolean, default: true }
+      - { label: Projet phare (grande carte), name: featured, widget: boolean, default: false }
+      - label: Résumé (une ou deux phrases)
+        name: summary
+        widget: object
+        fields:
+          - { label: Français, name: fr, widget: text }
+          - { label: English, name: en, widget: text }
+      - label: Votre rôle
+        name: role
+        widget: object
+        required: false
+        fields:
+          - { label: Français, name: fr, widget: string, required: false }
+          - { label: English, name: en, widget: string, required: false }
+      - { label: Début (AAAA ou AAAA-MM), name: start, widget: string, required: false }
+      - { label: Fin (AAAA, AAAA-MM ou present), name: end, widget: string, required: false }
+      - label: Statut
+        name: status
+        widget: select
+        required: false
+        options:
+          - { label: En production, value: production }
+          - { label: En développement, value: development }
+          - { label: Maintenu, value: maintained }
+          - { label: Archivé, value: archived }
+      - { label: Technologies, name: stack, widget: list, required: false }
+      - label: Liens
+        name: links
+        widget: object
+        fields:
+          - { label: Site en ligne, name: live, widget: string, required: false }
+          - { label: Code source, name: repo, widget: string, required: false }
+      - label: Image principale
+        name: cover
+        widget: object
+        required: false
+        fields:
+          - { label: Image, name: src, widget: image }
+          - label: Texte alternatif (décrire l’image)
+            name: alt
+            widget: object
+            fields:
+              - { label: Français, name: fr, widget: string }
+              - { label: English, name: en, widget: string }
+      - label: Captures supplémentaires
+        name: gallery
+        widget: list
+        required: false
+        fields:
+          - { label: Image, name: src, widget: image }
+          - label: Texte alternatif
+            name: alt
+            widget: object
+            fields:
+              - { label: Français, name: fr, widget: string }
+              - { label: English, name: en, widget: string }
+      - label: Étude de cas (Markdown) — laisser vide pour ne pas créer de page dédiée
+        name: body
+        widget: object
+        required: false
+        fields:
+          - { label: Français, name: fr, widget: markdown, required: false }
+          - { label: English, name: en, widget: markdown, required: false }

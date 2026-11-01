@@ -1,0 +1,23 @@
+# dépendances
+node_modules/
+
+# build Next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# images générées au build (voir scripts/optimize-images.mjs)
+public/_generated/
+.generated/
+
+# tests
+playwright-report/
+test-results/
+.lighthouseci/
+coverage/
+
+# divers
+.DS_Store
+*.log
+.env*.local

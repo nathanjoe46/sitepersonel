@@ -1,0 +1,13 @@
+{
+  "title": "PartiGest",
+  "order": 5,
+  "published": true,
+  "featured": false,
+  "summary": {
+    "fr": "Application de gestion pour partis politiques.",
+    "en": "Management application for political parties."
+  },
+  "stack": [],
+  "links": { "live": "", "repo": "" },
+  "gallery": []
+}

@@ -1,0 +1,13 @@
+{
+  "title": "BiznisHub / SalesControl Pro",
+  "order": 4,
+  "published": true,
+  "featured": false,
+  "summary": {
+    "fr": "Application de gestion et de suivi des ventes.",
+    "en": "Sales management and tracking application."
+  },
+  "stack": [],
+  "links": { "live": "", "repo": "" },
+  "gallery": []
+}

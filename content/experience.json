@@ -1,0 +1,113 @@
+{
+  "items": [
+    {
+      "role": { "fr": "Fondateur", "en": "Founder" },
+      "organization": { "fr": "PragmaTech Solution", "en": "PragmaTech Solution" },
+      "end": "present",
+      "highlights": [
+        {
+          "fr": "Création et direction d’une entreprise de développement logiciel.",
+          "en": "Founded and run a software development company."
+        }
+      ]
+    },
+    {
+      "role": {
+        "fr": "Informaticien — systèmes d’information et développement",
+        "en": "Software engineer — information systems & development"
+      },
+      "organization": {
+        "fr": "Institution publique haïtienne (protection de l’enfance et bien-être social)",
+        "en": "Haitian public institution (child protection and social welfare)"
+      },
+      "location": { "fr": "Port-au-Prince, Haïti", "en": "Port-au-Prince, Haiti" },
+      "start": "2023-08",
+      "end": "present",
+      "highlights": [
+        {
+          "fr": "Administration, maintenance et accompagnement des utilisateurs d’un système d’information national de protection de l’enfance.",
+          "en": "Administration, maintenance and user support for a national child-protection information system."
+        },
+        {
+          "fr": "Conception et développement d’applications métiers pour numériser des procédures administratives.",
+          "en": "Designed and built business applications to digitise administrative procedures."
+        },
+        {
+          "fr": "Structuration et mise à jour des bases de données institutionnelles.",
+          "en": "Structured and maintained institutional databases."
+        },
+        {
+          "fr": "Analyse des besoins des services, documentation technique et procédures d’utilisation.",
+          "en": "Requirements analysis with business units, technical documentation and user guides."
+        },
+        {
+          "fr": "Formation et assistance des employés aux applications et outils numériques.",
+          "en": "Trained and supported staff on applications and digital tools."
+        }
+      ],
+      "stack": ["PHP", "Laravel", "MySQL", "JavaScript", "Git"]
+    },
+    {
+      "role": {
+        "fr": "Responsable support technique et community manager",
+        "en": "Technical support lead and community manager"
+      },
+      "organization": {
+        "fr": "PG ECOM — Protege Global Ecommerce, Inc.",
+        "en": "PG ECOM — Protege Global Ecommerce, Inc."
+      },
+      "start": "2022-03",
+      "end": "2024-08",
+      "highlights": [
+        {
+          "fr": "Support technique de premier niveau, analyse et remontée des incidents.",
+          "en": "First-line technical support, incident analysis and escalation."
+        },
+        {
+          "fr": "Formation interne aux outils numériques et aux bonnes pratiques de sécurité.",
+          "en": "Internal training on digital tools and security best practices."
+        },
+        {
+          "fr": "Animation des communautés sur WhatsApp, Facebook et Telegram.",
+          "en": "Community management on WhatsApp, Facebook and Telegram."
+        }
+      ]
+    },
+    {
+      "role": { "fr": "Analyste programmeur (freelance)", "en": "Programmer analyst (freelance)" },
+      "organization": { "fr": "Loyalto Services", "en": "Loyalto Services" },
+      "start": "2023-02",
+      "end": "2023-06",
+      "highlights": [
+        {
+          "fr": "Analyse des besoins fonctionnels et techniques, rédaction des spécifications.",
+          "en": "Functional and technical requirements analysis, specification writing."
+        },
+        {
+          "fr": "Conception et développement d’applications web et de modules internes.",
+          "en": "Designed and built web applications and internal modules."
+        },
+        {
+          "fr": "Modélisation de bases de données relationnelles et correction d’anomalies.",
+          "en": "Relational database modelling and bug fixing."
+        }
+      ],
+      "stack": ["PHP", "MySQL", "JavaScript"]
+    },
+    {
+      "role": {
+        "fr": "Instructeur en freelancing (freelance)",
+        "en": "Freelancing instructor (freelance)"
+      },
+      "organization": { "fr": "Lead Entrepreneur", "en": "Lead Entrepreneur" },
+      "start": "2023",
+      "end": "2023",
+      "highlights": [
+        {
+          "fr": "Conception et animation de formations à distance, création de modules pédagogiques.",
+          "en": "Designed and delivered remote training sessions and course modules."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "degrees": [
+    {
+      "title": {
+        "fr": "Licence en sciences informatiques",
+        "en": "Bachelor’s degree in Computer Science"
+      },
+      "school": "Institut Universitaire de l’Ouest (IUO)",
+      "location": { "fr": "Port-au-Prince, Haïti", "en": "Port-au-Prince, Haiti" },
+      "start": "2019",
+      "end": "2023",
+      "note": { "fr": "Diplômé le 19 mai 2023.", "en": "Graduated on 19 May 2023." }
+    }
+  ],
+  "certifications": [
+    {
+      "title": {
+        "fr": "Initiation à l’intelligence artificielle",
+        "en": "Introduction to artificial intelligence"
+      },
+      "date": "2024-01"
+    },
+    {
+      "title": {
+        "fr": "Introduction à l’analyse de données",
+        "en": "Introduction to data analysis"
+      },
+      "issuer": "Le Wagon",
+      "date": "2023-04"
+    },
+    {
+      "title": { "fr": "Marketing numérique", "en": "Digital marketing" },
+      "issuer": "LinkedIn Learning",
+      "date": "2021-08"
+    },
+    {
+      "title": { "fr": "Formation complète JavaScript", "en": "Complete JavaScript course" },
+      "date": "2020-06"
+    },
+    {
+      "title": { "fr": "Front End Fundamentals", "en": "Front End Fundamentals" },
+      "issuer": "Pirple",
+      "date": "2020-04"
+    },
+    {
+      "title": {
+        "fr": "Découverte de l’univers de la cybersécurité",
+        "en": "Discovering cybersecurity"
+      },
+      "date": "2019-11"
+    }
+  ]
+}

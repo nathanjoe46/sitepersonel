@@ -1,0 +1,70 @@
+{
+  "groups": [
+    {
+      "title": { "fr": "Back-end", "en": "Back end" },
+      "items": {
+        "fr": ["PHP", "Laravel", "Livewire", "Python"],
+        "en": ["PHP", "Laravel", "Livewire", "Python"]
+      }
+    },
+    {
+      "title": { "fr": "Front-end", "en": "Front end" },
+      "items": {
+        "fr": ["JavaScript", "TypeScript", "React", "Next.js", "HTML5 et CSS3", "Tailwind CSS"],
+        "en": ["JavaScript", "TypeScript", "React", "Next.js", "HTML5 & CSS3", "Tailwind CSS"]
+      }
+    },
+    {
+      "title": { "fr": "Bases de données", "en": "Databases" },
+      "items": {
+        "fr": ["MySQL", "PostgreSQL", "SQL", "Modélisation relationnelle", "Conception de schémas"],
+        "en": ["MySQL", "PostgreSQL", "SQL", "Relational modelling", "Schema design"]
+      }
+    },
+    {
+      "title": { "fr": "Sécurité applicative", "en": "Application security" },
+      "items": {
+        "fr": [
+          "Protection CSRF",
+          "Prévention des injections SQL",
+          "Validation des entrées",
+          "Rôles et permissions",
+          "Sessions sécurisées"
+        ],
+        "en": [
+          "CSRF protection",
+          "SQL injection prevention",
+          "Input validation",
+          "Roles and permissions",
+          "Secure sessions"
+        ]
+      }
+    },
+    {
+      "title": { "fr": "Analyse et conception", "en": "Analysis & design" },
+      "items": {
+        "fr": [
+          "Analyse des besoins",
+          "Architecture applicative",
+          "Cahier des charges",
+          "Documentation technique",
+          "Tests et débogage"
+        ],
+        "en": [
+          "Requirements analysis",
+          "Application architecture",
+          "Functional specifications",
+          "Technical documentation",
+          "Testing and debugging"
+        ]
+      }
+    },
+    {
+      "title": { "fr": "Outils", "en": "Tooling" },
+      "items": {
+        "fr": ["Git", "GitHub", "Linux (Ubuntu)", "SSH", "VS Code"],
+        "en": ["Git", "GitHub", "Linux (Ubuntu)", "SSH", "VS Code"]
+      }
+    }
+  ]
+}
